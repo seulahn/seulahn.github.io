@@ -20,6 +20,8 @@ main:
 categories:
   - title: "WEB"
     children:
+    - title: "JavaScript"
+      url: /categories/javascript/
     - title: "HTML_CSS"
       url: /categories/html-css/
   - title: "Technical Writing"
