@@ -1,9 +1,9 @@
 ---
-title: "Git"
+title: "Technical Writing"
 layout: category
-permalink: /categories/git/
+permalink: /categories/tw/
 author_profile: true
-taxonomy: Git
+taxonomy: Technical Writing
 sidebar:
   nav: "categories"
 ---

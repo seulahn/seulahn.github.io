@@ -1,9 +1,9 @@
 ---
-title: "HTML_CSS"
+title: "JavaScript"
 layout: category
-permalink: /categories/html-css/
+permalink: /categories/javascript/
 author_profile: true
-taxonomy: HTML_CSS
+taxonomy: JavaScript
 sidebar:
   nav: "categories"
 ---

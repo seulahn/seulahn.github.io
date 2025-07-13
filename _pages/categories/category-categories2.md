@@ -1,9 +1,9 @@
 ---
-title: "Technical Writing"
+title: "HTML_CSS"
 layout: category
-permalink: /categories/tw/
+permalink: /categories/html-css/
 author_profile: true
-taxonomy: Technical Writing
+taxonomy: HTML_CSS
 sidebar:
   nav: "categories"
 ---
