@@ -8,6 +8,9 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
+@import "custom/home-cards";
+@import "custom/about";
+
 @import url('https://fonts.googleapis.com/css2?family=Song+Myung&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');

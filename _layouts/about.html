@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+{% assign author = site.author %}
+{% assign avatar = page.avatar | default: author.avatar %}
+
+<div id="main" role="main">
+  <div class="home-cards about-page">
+    <section class="about-panel">
+      <div class="about-panel__content">
+        <div class="about-panel__intro">
+          <div class="about-panel__intro-text">
+            {% if page.eyebrow %}
+              <p class="home-featured__eyebrow about-panel__eyebrow">{{ page.eyebrow }}</p>
+            {% endif %}
+            {% if page.title %}
+              <h1 class="home-featured__title about-panel__title">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>
+            {% endif %}
+          </div>
+          {% if avatar %}
+            <div class="about-panel__avatar-wrap">
+              <img
+                class="about-panel__avatar"
+                src="{{ avatar | relative_url }}"
+                alt="{{ author.name | default: 'Profile photo' }}"
+                loading="lazy"
+              >
+            </div>
+          {% endif %}
+        </div>
+        <div class="about-panel__body">
+          {{ content }}
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

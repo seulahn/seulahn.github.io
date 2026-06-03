@@ -3,11 +3,11 @@ title: "[API Documentation] REST API ④ 헤더"
 excerpt: "자주 쓰이는 요청 헤더와 응답 헤더 알아보기, 그리고 헤더를 표로 정리하기"
 
 categories:
-  - Technical Writing
+  - Writing
 tags:
   - [Technical Writing, API, REST]
 
-permalink: /tw/api-docs-rest-4
+permalink: /writing/api-docs-rest-4
 
 toc: true
 toc_sticky: true

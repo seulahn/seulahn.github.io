@@ -1,0 +1,67 @@
+---
+layout: default
+---
+
+{% assign project_posts = site.posts | where_exp: "item", "item.categories contains 'Projects'" | sort: "date" | reverse %}
+{% assign writing_posts = site.posts | where_exp: "item", "item.categories contains 'Writing'" | sort: "date" | reverse %}
+{% assign featured = page.featured %}
+
+<div id="main" role="main">
+  <div class="home-cards">
+    {% if featured %}
+      <section class="home-featured">
+        <div class="home-featured__content">
+          {% if featured.eyebrow %}
+            <p class="home-featured__eyebrow">{{ featured.eyebrow }}</p>
+          {% endif %}
+          <h1 class="home-featured__title">{{ featured.title }}</h1>
+          {% if featured.excerpt %}
+            <p class="home-featured__excerpt">{{ featured.excerpt }}</p>
+          {% endif %}
+          {% if featured.url %}
+            <a class="home-featured__cta" href="{{ featured.url | relative_url }}">
+              {{ featured.cta | default: "Read more" }} →
+            </a>
+          {% endif %}
+        </div>
+        <div class="home-featured__media{% unless featured.image %} home-featured__media--placeholder{% endunless %}">
+          {% if featured.image %}
+            <img src="{{ featured.image | relative_url }}" alt="">
+          {% endif %}
+        </div>
+      </section>
+    {% endif %}
+
+    <section class="home-section">
+      <header class="home-section__header">
+        <h2 class="home-section__title">Projects</h2>
+        <a class="home-section__link" href="{{ '/categories/projects/' | relative_url }}">View all →</a>
+      </header>
+      {% if project_posts.size > 0 %}
+        <div class="home-grid">
+          {% for post in project_posts %}
+            {% include home-card.html post=post %}
+          {% endfor %}
+        </div>
+      {% else %}
+        <p class="home-section__empty">New projects coming soon.</p>
+      {% endif %}
+    </section>
+
+    <section class="home-section">
+      <header class="home-section__header">
+        <h2 class="home-section__title">Writing</h2>
+        <a class="home-section__link" href="{{ '/categories/writing/' | relative_url }}">View all →</a>
+      </header>
+      {% if writing_posts.size > 0 %}
+        <div class="home-grid">
+          {% for post in writing_posts %}
+            {% include home-card.html post=post %}
+          {% endfor %}
+        </div>
+      {% else %}
+        <p class="home-section__empty">No writing posts yet.</p>
+      {% endif %}
+    </section>
+  </div>
+</div>

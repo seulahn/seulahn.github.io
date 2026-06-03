@@ -3,11 +3,11 @@ title: "[API Documentation] API와 정형 데이터"
 excerpt: "API는 어떻게 작동하고, JSON과 XML은 무엇일까?" 
 
 categories:
-  - Technical Writing
+  - Writing
 tags:
   - [Technical Writing, API]
 
-permalink: /tw/api-docs-intro
+permalink: /writing/api-docs-intro
 
 toc: true
 toc_sticky: true

@@ -3,11 +3,11 @@ title: "[API Documentation] XML의 기본 구조와 문법"
 excerpt: "XML의 요소를 이루는 태그와 속성을 알아보고, 선언, 네임스페이스를 포함한 기초 문법까지 살펴본다." 
 
 categories:
-  - Technical Writing
+  - Writing
 tags:
   - [Technical Writing, API, XML]
 
-permalink: /tw/api-docs-xml-intro
+permalink: /writing/api-docs-xml-intro
 
 toc: true
 toc_sticky: true

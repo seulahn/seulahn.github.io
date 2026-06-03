@@ -3,11 +3,11 @@ title: "[API Documentation] REST API ① 특성과 구성 요소, 그리고 리�
 excerpt: "오늘날 가장 널리 쓰이는 웹 API인 REST API를 알아보자." 
 
 categories:
-  - Technical Writing
+  - Writing
 tags:
   - [Technical Writing, API, REST]
 
-permalink: /tw/api-docs-rest-1
+permalink: /writing/api-docs-rest-1
 
 toc: true
 toc_sticky: true

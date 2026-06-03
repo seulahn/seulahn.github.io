@@ -3,11 +3,11 @@ title: "[API Documentation] JSON의 개념과 구조, 그리고 문서화 방법
 excerpt: "JSON을 더 자세히 이해하고, JSON 데이터를 표로 정리해 보자." 
 
 categories:
-  - Technical Writing
+  - Writing
 tags:
   - [Technical Writing, API, JSON]
 
-permalink: /tw/api-docs-json
+permalink: /writing/api-docs-json
 
 toc: true
 toc_sticky: true

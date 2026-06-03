@@ -1,32 +1,13 @@
 # main links
 main:
   - title: "Home"
-    url: https://seulahn.github.io/
+    url: /
+
+  - title: "Projects"
+    url: /categories/projects/
+
+  - title: "Writing"
+    url: /categories/writing/
 
   - title: "About"
     url: /about/
-
-  - title: "GitHub"
-    url: https://github.com/seulahn
-
-  # - title: "Projects"
-  #   url: /projects/
-
-  # - title: "Categories"
-  #   url: /categories/
-
-# sidebar navigation (categories)
-# 2022.02.15 sidebar update : simple ver.
-categories:
-  - title: "WEB"
-    children:
-    - title: "JavaScript"
-      url: /categories/javascript/
-    - title: "HTML_CSS"
-      url: /categories/html-css/
-  - title: "Technical Writing"
-    url: /categories/tw/
-  - title: "Git"
-    url: /categories/git/
-  - title: "GitHub Blog"
-    url: /categories/github-blog/

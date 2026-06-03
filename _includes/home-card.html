@@ -1,0 +1,29 @@
+{% if include.post.header.teaser %}
+  {% capture card_image %}{{ include.post.header.teaser }}{% endcapture %}
+{% elsif include.post.image %}
+  {% capture card_image %}{{ include.post.image }}{% endcapture %}
+{% else %}
+  {% assign card_image = nil %}
+{% endif %}
+
+{% assign card_title = include.post.title | remove: "[API Documentation] " | markdownify | remove: "<p>" | remove: "</p>" %}
+{% assign card_excerpt = include.post.excerpt | default: include.post.description | markdownify | strip_html | truncate: 120 %}
+{% assign card_category = include.post.categories | first | default: "Post" %}
+
+<article class="home-card" itemscope itemtype="https://schema.org/CreativeWork">
+  <a class="home-card__link" href="{{ include.post.url | relative_url }}" itemprop="url">
+    <div class="home-card__media{% unless card_image %} home-card__media--placeholder home-card__media--{{ include.post.categories | first | slugify }}{% endunless %}">
+      {% if card_image %}
+        <img src="{{ card_image | relative_url }}" alt="" itemprop="image" loading="lazy">
+      {% else %}
+        <span class="home-card__media-label">{{ card_category }}</span>
+      {% endif %}
+    </div>
+    <div class="home-card__body">
+      <h3 class="home-card__title" itemprop="headline">{{ card_title }}</h3>
+      {% if card_excerpt %}
+        <p class="home-card__excerpt" itemprop="description">{{ card_excerpt }}</p>
+      {% endif %}
+    </div>
+  </a>
+</article>

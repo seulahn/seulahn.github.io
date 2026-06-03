@@ -1,0 +1,99 @@
+/* ==========================================================================
+   About page
+   ========================================================================== */
+
+.about-page {
+  padding-top: 2.5rem;
+}
+
+.about-panel {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #fff;
+}
+
+.about-panel__content {
+  padding: 2rem 1.75rem;
+
+  @include breakpoint($large) {
+    padding: 3rem;
+  }
+}
+
+.about-panel__intro {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 1.5rem;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+}
+
+.about-panel__intro-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.about-panel__eyebrow {
+  margin: 0;
+}
+
+.about-panel__title {
+  margin: 0 !important;
+}
+
+.about-panel__avatar-wrap {
+  flex-shrink: 0;
+  transform: translateY(0.35rem);
+
+  @include breakpoint($large) {
+    transform: translateY(0.6rem);
+  }
+}
+
+.about-panel__avatar {
+  display: block;
+  width: 4.75rem;
+  height: 4.75rem;
+  border-radius: 50%;
+  border: none;
+  object-fit: cover;
+
+  @include breakpoint($large) {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+}
+
+.about-panel__body {
+  max-width: 42rem;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: rgba(0, 0, 0, 0.78);
+
+  p {
+    margin: 0 0 1.15rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: $primary-color;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+
+    &:hover,
+    &:focus {
+      color: $link-color-hover;
+    }
+  }
+}
+
+.layout--about #main {
+  width: 100%;
+  max-width: 100%;
+  float: none;
+  padding: 0;
+}

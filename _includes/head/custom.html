@@ -1,5 +1,78 @@
 <!-- start custom head snippets -->
 
-<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<style>
+  .masthead__nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    width: 100%;
+  }
+
+  .masthead__nav .site-title {
+    margin-right: auto;
+  }
+
+  .masthead__links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.25rem 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .masthead__links a {
+    position: relative;
+    white-space: nowrap;
+  }
+
+  .masthead__links a:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    background: var(--mm-primary-color, #7a8288);
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+  }
+
+  .masthead__links a:hover:before,
+  .masthead__links a:focus:before {
+    transform: scaleX(1);
+  }
+
+  @media (max-width: 600px) {
+    .masthead__nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .masthead__nav .site-title {
+      margin-right: 0;
+    }
+
+    .masthead__links {
+      justify-content: flex-start;
+      width: 100%;
+    }
+  }
+
+  .layout--single .page,
+  .layout--archive .archive,
+  .layout--home .archive,
+  .layout--home-cards #main,
+  .layout--about #main {
+    width: 100%;
+    max-width: 100%;
+    float: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+</style>
 
 <!-- end custom head snippets -->

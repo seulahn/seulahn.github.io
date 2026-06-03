@@ -27,3 +27,6 @@ codekit-config.json
 .sass-cache
 _asset_bundler_cache
 _site
+
+# Redesign inspiration files (local reference only)
+_inspiration/

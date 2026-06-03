@@ -266,6 +266,11 @@ compress_html:
   ignore:
     envs: development
 
+# Collections
+collections:
+  archive:
+    output: true
+
 # Defaults
 defaults:
   # _posts
@@ -274,11 +279,18 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
       read_time: #true
       show_date: true
       comments: true
       # share: true
       related: true
-      sidebar:
-        nav: "categories"
+  # _archive
+  - scope:
+      path: ""
+      type: archive
+    values:
+      layout: single
+      show_date: true
+      comments: false
+      related: false
+      search: false
