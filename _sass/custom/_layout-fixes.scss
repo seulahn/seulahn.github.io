@@ -1,0 +1,33 @@
+/* ==========================================================================
+   Full-width content (no sidebar offset)
+   ========================================================================== */
+
+.layout--single .page,
+.layout--archive .archive,
+.layout--category .archive,
+.layout--home .archive,
+.layout--home-cards #main,
+.layout--about #main {
+  width: 100%;
+  max-width: 100%;
+  float: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.layout--category .archive,
+.layout--archive .archive {
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.layout--category #main,
+.layout--archive #main,
+.layout--single #main {
+  max-width: 72rem;
+}
+
+.layout--category .archive__subtitle,
+.layout--archive .archive__subtitle {
+  margin-top: 0;
+}

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="{{ site.locale | slice: 0,2 | default: 'en' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0; url={{ page.redirect_to | relative_url }}">
+    <link rel="canonical" href="{{ page.redirect_to | absolute_url }}">
+    <script>location.replace("{{ page.redirect_to | relative_url }}");</script>
+    <title>Redirecting…</title>
+  </head>
+  <body>
+    <p>Redirecting to <a href="{{ page.redirect_to | relative_url }}">{{ page.redirect_to }}</a>…</p>
+  </body>
+</html>
