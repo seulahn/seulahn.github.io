@@ -212,6 +212,10 @@
     padding: 1rem;
   }
 
+  &--portfolio {
+    background: linear-gradient(160deg, #f3f0ff 0%, #ddd6fe 100%);
+  }
+
   &--projects {
     background: linear-gradient(160deg, #fff1e6 0%, #ffd9bf 100%);
   }

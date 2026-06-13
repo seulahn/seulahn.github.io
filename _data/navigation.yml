@@ -3,6 +3,9 @@ main:
   - title: "Home"
     url: /
 
+  - title: "Portfolio"
+    url: /categories/portfolio/
+
   - title: "Projects"
     url: /categories/projects/
 
@@ -11,3 +14,8 @@ main:
 
   - title: "About"
     url: /about/
+
+  - title: "GitHub"
+    url: https://github.com/seulahn
+    icon: github
+    external: true

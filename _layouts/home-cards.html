@@ -2,6 +2,7 @@
 layout: default
 ---
 
+{% assign portfolio_posts = site.posts | where_exp: "item", "item.categories contains 'Portfolio'" | sort: "date" | reverse %}
 {% assign project_posts = site.posts | where_exp: "item", "item.categories contains 'Projects'" | sort: "date" | reverse %}
 {% assign writing_posts = site.posts | where_exp: "item", "item.categories contains 'Writing'" | sort: "date" | reverse %}
 {% assign featured = page.featured %}
@@ -34,12 +35,28 @@ layout: default
 
     <section class="home-section">
       <header class="home-section__header">
+        <h2 class="home-section__title">Portfolio</h2>
+        <a class="home-section__link" href="{{ '/categories/portfolio/' | relative_url }}">View all →</a>
+      </header>
+      {% if portfolio_posts.size > 0 %}
+        <div class="home-grid">
+          {% for post in portfolio_posts limit: 4 %}
+            {% include home-card.html post=post %}
+          {% endfor %}
+        </div>
+      {% else %}
+        <p class="home-section__empty">Portfolio items coming soon.</p>
+      {% endif %}
+    </section>
+
+    <section class="home-section">
+      <header class="home-section__header">
         <h2 class="home-section__title">Projects</h2>
         <a class="home-section__link" href="{{ '/categories/projects/' | relative_url }}">View all →</a>
       </header>
       {% if project_posts.size > 0 %}
         <div class="home-grid">
-          {% for post in project_posts %}
+          {% for post in project_posts limit: 4 %}
             {% include home-card.html post=post %}
           {% endfor %}
         </div>
@@ -55,7 +72,7 @@ layout: default
       </header>
       {% if writing_posts.size > 0 %}
         <div class="home-grid">
-          {% for post in writing_posts %}
+          {% for post in writing_posts limit: 4 %}
             {% include home-card.html post=post %}
           {% endfor %}
         </div>

@@ -34,7 +34,7 @@ masthead_title: # overrides the website title displayed in the masthead, use " "
 # breadcrumbs            : false # true, false (default)
 words_per_minute: 200
 comments:
-  provider: "utterances" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  provider: "giscus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
     shortname: # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -47,6 +47,18 @@ comments:
   utterances:
     theme: "github-light" # "github-dark"
     issue_term: "pathname"
+  giscus:
+    repo: "seulahn/seulahn.github.io"
+    repo_id: "R_kgDOOSPFLQ"
+    category: "Announcements"
+    category_id: "DIC_kwDOOSPFLc4C-Z2W"
+    mapping: "pathname"
+    strict: 0
+    reactions_enabled: 1
+    emit_metadata: 0
+    input_position: "bottom"
+    theme: "light"
+    lang: "en"
   staticman:
     branch: # "master"
     endpoint: # "https://{your Staticman v3 API}/v3/entry/github/"

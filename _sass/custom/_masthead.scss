@@ -43,9 +43,18 @@
 }
 
 .masthead__links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
   position: relative;
   font-weight: bold;
   text-decoration: none;
+}
+
+.masthead__links a .fab,
+.masthead__links a .fas {
+  font-size: 0.95em;
+  line-height: 1;
 }
 
 .masthead__links a:before {
